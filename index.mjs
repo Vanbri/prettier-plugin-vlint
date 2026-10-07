@@ -336,9 +336,11 @@ function printTypeLiteral(path, print) {
 		'{',
 		indentBuilder([
 			hardlineBuilder,
-			joinBuilder([',', hardlineBuilder], members),
+			hardlineBuilder,
+			joinBuilder(hardlineBuilder, members),
 		]),
 		dedentBuilder([
+			hardlineBuilder,
 			hardlineBuilder,
 			'}',
 		]),
@@ -459,7 +461,7 @@ function print(path, options, print) {
 						]),
 						node.alternate
 							? [
-								hardlineBuilder,
+								consequentKeepsBraces ? ' ' : hardlineBuilder,
 								'else ',
 								print('alternate'),
 							]

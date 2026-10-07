@@ -1,6 +1,6 @@
 {
 	"name": "prettier-plugin-vlint",
-	"version": "1.3.0",
+	"version": "1.3.1",
 	"license": "MIT",
 	"repository": {
 		"type": "git",
@@ -18,5 +18,11 @@
 		"index.mjs",
 		"README.md",
 		"LICENSE"
-	]
+	],
+	"devDependencies": {
+		"vitest": "^5.0.3"
+	},
+	"scripts": {
+		"test": "vitest"
+	}
 }
